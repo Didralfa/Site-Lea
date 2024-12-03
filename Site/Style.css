@@ -1,0 +1,328 @@
+.navbar {
+  position: fixed; /* Fixe la barre en haut de la page */
+  top: 0;          /* Place la barre tout en haut */
+  left: 0;
+  width: 100%;     /* Occupe toute la largeur de la page */
+  background-color: #46C3CE; /* Couleur de fond de la barre */
+  padding: 10px 0; /* Espacement interne vertical */
+  z-index: 1000;   /* Assure que la barre est au-dessus des autres éléments */
+  text-align: center; /* Centre le contenu horizontalement */
+}
+
+.navbar a {
+  color: white;    /* Couleur du texte des liens */
+  text-decoration: none; /* Retire le soulignement des liens */
+  padding: 10px 20px; /* Espacement autour des liens */
+  display: inline-block; /* Garde les liens côte à côte */
+  font-size: 16px;  /* Taille de la police */
+}
+
+.navbar a:hover {
+  background-color: #d199c5; /* Couleur de fond au survol */
+  border-radius: 5px; /* Coins arrondis pour l'effet */
+}
+
+.navbar-custom {
+  position: fixed; /* Fixe la barre en haut de la page */
+  top: 0;          /* Place la barre tout en haut */
+  left: 0;
+  width: 100%;     /* Occupe toute la largeur de la page */
+  background-color: #043242; /* Couleur de fond de la barre */
+  padding: 10px 0; /* Espacement interne vertical */
+  z-index: 1000;   /* Assure que la barre est au-dessus des autres éléments */
+  text-align: center; /* Centre le contenu horizontalement */
+}
+
+.navbar-custom a {
+  color: white;    /* Couleur du texte des liens */
+  text-decoration: none; /* Retire le soulignement des liens */
+  padding: 10px 20px; /* Espacement autour des liens */
+  display: inline-block; /* Garde les liens côte à côte */
+  font-size: 16px;  /* Taille de la police */
+}
+
+.navbar-custom a:hover {
+  background-color: #46C3CE; /* Couleur de fond au survol */
+  border-radius: 5px; /* Coins arrondis pour l'effet */
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.logo {
+  background-image: url('images/logo.png');
+  position: absolute;
+  top: 30px;
+  left: 600px;
+}
+
+
+
+/* Cache la barre de défilement mais permet le scroll horizontal ou vertical */
+body::-webkit-scrollbar {
+  display: none;  /* Cache la barre de défilement sur les navigateurs basés sur Webkit (Chrome, Safari) */
+}
+
+body {
+  overflow-x: hidden; /* Supprime la barre de défilement horizontale */
+  overflow-y: auto;   /* Permet le défilement vertical */
+  margin: 0;          /* Supprime les marges par défaut */
+  padding: 0;         /* Supprime les paddings par défaut */
+  font-family: Urban, sans-serif;
+  -ms-overflow-style: none;  /* Pour Internet Explorer et Edge */
+  scrollbar-width: none;  /* Pour Firefox */
+  margin: 0;         /* Supprimer la marge par défaut */
+  padding: 0;        /* Supprimer le padding par défaut */
+  height: 100%;      /* S'assurer que le corps occupe toute la hauteur de la fenêtre */
+  padding-bottom: 100px;
+  
+}
+
+.spacing{
+  height: 200px; /* Ajoute un espace de 200px en bas */
+  background-color: #eb1818; /* Couleur visible pour tester */
+}
+
+html, body {
+  height: 100%; /* S'assure que le contenu remplit au moins la hauteur de l'écran */
+  margin: 0;
+}
+
+header {
+  background-color: #46C3CE;
+  color: white;
+  padding: 5px 5px;
+  text-align: center;
+}
+
+.police {
+  font-family: "Lacquer", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+section {
+  padding: 20px;
+}
+
+
+.sous-titre{
+  position:fixed;
+  bottom: 200%;
+  left: -140%;
+  color: #ffffff;
+  font-size: 50px;
+}
+
+.auteur{
+  position: fixed;
+  bottom:-140%;
+  right: -145%;
+  font-size: 50px;
+  color: #ffffff;
+}
+
+.footer {
+  background-color: #46C3CE;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.mail a {
+  position: absolute; 
+  right: 88%;   
+  bottom:20%;    
+  padding: 5px;    
+  font-size: 25px;  
+  color: white;
+}
+
+.mentions {
+  position: absolute; 
+  bottom: 0;     
+  right: 50px;          
+  padding: 5px;     
+  font-size: 14px;   
+}
+
+
+
+nav ul li a:active {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Ombre portée lors du clic */
+}
+
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-icons a {
+  display: inline-block;
+}
+
+.social-icon {
+  width: 40px;  /* Taille des icônes */
+  height: 40px; /* Taille des icônes */
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1); /* Agrandir légèrement au survol */
+  opacity: 0.8;  /* Opacité réduite au survol */
+}
+
+
+
+
+/* Par défaut, tous les éléments avec la classe "fade-item" sont invisibles */
+.fade-item {
+  opacity: 0;
+  transition: opacity 1s ease, transform 1s ease; /* Transition fluide de l'opacité et du mouvement */
+}
+
+/* Quand la classe "fade-in" est ajoutée, les éléments deviennent visibles */
+.fade-item.visible {
+  opacity: 1;
+  transform: translateY(0); /* Retour à la position normale */
+}
+
+
+.fond {
+  background-image: url('images/fond.jpg');
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  color: white;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.fond-custom {
+  background-image: url('images/chaussures.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  height: 100vh;
+  color: white;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.carousel-rose {
+  position: absolute;
+  width: 570px; /* Largeur du carrousel */
+  max-width: 531px; /* Largeur maximale */
+  height: 300px; /* Hauteur fixe du carrousel */
+  overflow: hidden; /* Cache les images qui dépassent le cadre */
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  background-color: black;
+  top: 800px;
+  right: 0px;
+}
+
+.carousel-autres {
+  position: absolute;
+  width: 570px; /* Largeur du carrousel */
+  max-width: 531px; /* Largeur maximale */
+  height: 300px; /* Hauteur fixe du carrousel */
+  overflow: hidden; /* Cache les images qui dépassent le cadre */
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  background-color: black;
+  top: 800px;
+  left: 600px;
+}
+
+.carousel-stade {
+  position: absolute;
+  width: 570px; /* Largeur du carrousel */
+  max-width: 531px; /* Largeur maximale */
+  height: 300px; /* Hauteur fixe du carrousel */
+  overflow: hidden; /* Cache les images qui dépassent le cadre */
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  background-color: black;
+  top: 800px;
+  right: 600px;
+}
+
+.carousel-images {
+  display: flex; /* Permet l'alignement horizontal des images */
+  transition: transform 0.5s ease-in-out; /* Transition fluide lors du changement d'image */
+  width: 100%; /* La largeur est ajustée dynamiquement en JavaScript */
+  height: 100%; /* Correspond à la hauteur du carrousel */
+}
+
+.carousel-images img {
+  width: 100%; /* L'image remplit toute la largeur du cadre */
+  height: 100%; /* L'image remplit toute la hauteur du cadre */
+  object-fit: contain; /* Ajuste l'image sans distorsion */
+  flex-shrink: 0; /* Empêche la réduction de la taille de l'image */
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%; /* Aligne les boutons verticalement au centre */
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1000; /* Place les boutons au-dessus des images */
+  font-size: 20px;
+}
+
+.carousel-btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-btn.prev {
+  left: 10px; /* Bouton précédent aligné à gauche */
+}
+
+.carousel-btn.next {
+  right: 10px; /* Bouton suivant aligné à droite */
+}
+
+
+.fade-out-container {
+  position: fixed; /* Reste visible au début de la page */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #4a90e2;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  transition: opacity 0.5s ease; /* Transition pour un fondu fluide */
+}
